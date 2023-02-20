@@ -1,0 +1,56 @@
+:root {
+    --bg-claro: hsla(50, 64%, 78%, 1);
+    --bg-oscuro: hsla(50, 19%, 18%, 1);
+    --secundario: hsla(40, 56%, 77%, 1);
+    --letras-1: #000;
+    --letras-2: #fff;
+    --bg-contacto: hsla(21, 60%, 52%, 1);
+
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    color: var(--letras-1);
+    background-color: var(--bg-claro);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body.dark {
+    color: var(--letras-2);
+    background-color: var(--bg-oscuro);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body main {
+    background-color: hsla(0, 0%, 20%, 0.3);
+    border-radius: 15px;
+}
+
+body aside {
+    background-color: hsla(318, 100%, 63%, 0.3);
+    border-radius: 15px;
+}
+
+body.dark main {
+    background-color: hsla(0, 0%, 40%, 0.3);
+    border-radius: 15px;
+}
+
+body.dark aside {
+    background-color: hsla(318, 100%, 63%, 0.2);
+    border-radius: 15px;
+}
+
+.contact-bar {
+    background-color: var(--bg-contacto);
+    color: var(--letras-2);
+    width: 100%;
+}
+

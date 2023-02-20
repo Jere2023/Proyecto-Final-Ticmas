@@ -13,144 +13,218 @@
         <meta property="og:url" content=" http://www.example.com" /> <!-- Aquí dominio con URL amigable-->
         <meta property="og:image" content=" http://example.com/image.jpg" /> <!--Aquí imagen de la pag terminada-->
         <meta property="og:description" content="Currículum vítae de Maria Fernanda Rodriguez" />
-    <!--Responsive Design, debo agregar el framework de bootstrap-->
-        <link href="" type="text/css" media="screen and (max-width: 800px)" href=""/> <!--Tamaño pequeño-->
-        <link href="" type="text/css" media="screen and (min-width: 801) and (max-width: 1200px)" href=""/> <!--Tamaño medio-->
-        <link href="" type="text/css" media="screen and (min-width: 1201px)" href=""/> <!--Tamaño grande-->
+    <!--Normalize 8.o.1-->
+    <link rel="preload" href="CSS/normalize.css" as="style">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <!--Fuentes letras-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!--Responsive Design-->
+        <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="CSS/tamanio-pequenio.css"/> <!--Tamaño pequeño-->
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 1201px)" href="CSS/tamanio-grande.css"/> <!--Tamaño grande-->
+        <!--Links CSS-->
+        <link rel="stylesheet" type="text/css" href="CSS/colors.css"> <!--Color-->
 </head>
 <body>
     <header>
-        <div itemscope itemtype="http://schema.org/Person" class=""> <!--Definir clase-->
-            <h1 itemprop="name">Maria Fernanda Rodriguez</h1>
-            <img itemprop="image" src="this person does not exist.jpg" alt="Esta es una imagen de la persona">
-            <h3 itemprop="jobTitle">Diseñadora Gráfica</h3>
+        <div class="presentacion-inicial" itemscope itemtype="http://schema.org/Person">
+            <img itemprop="image" src="this-person-does-not-exist.jpg" alt="Esta es una imagen de la persona">
+            <h1 itemprop="name">Maria Fernanda Rodriguez
+                <span itemprop="jobTitle">Diseñadora Gráfica</span>
+            </h1>
+            
         </div>
-        <div itemscope itemtype="http://schema.org/Person" class=""> <!--Definir clase-->
+        <div class="sobre-mi" itemscope itemtype="http://schema.org/Person">
             <h3>Sobre mí</h3>
-            <p itemprop="description" content="Soy una apasionada del arte y la tecnología y me encanta combinar ambos para crear 
+            <p itemprop="description" content="Tengo 35 años, siento pasión por del arte y la tecnología y me encanta combinar ambos para crear 
             soluciones impactantes. Con mi experiencia en diseño gráfico y marketing digital, 
             he ayudado a varias empresas a fortalecer su presencia en línea y alcanzar sus objetivos de negocio. 
             Me gusta trabajar en equipo y liderar proyectos con enfoque en los resultados.">
-                Soy una apasionada del arte y la tecnología y me encanta combinar ambos para crear soluciones impactantes. 
+                Tengo 35 años y siento pasión por del arte y la tecnología y me encanta combinar ambos para crear soluciones impactantes. 
                 Con mi experiencia en diseño gráfico y marketing digital, he ayudado a varias empresas a fortalecer su 
                 presencia en línea y alcanzar sus objetivos de negocio. 
                 Me gusta trabajar en equipo y liderar proyectos con enfoque en los resultados. 
             </p>
         </div>
-        <!--Barra de contacto--><!--Definir Clase del div-->
-        <div class="" itemscope itemtype="http://schema.org/Person">
-            <ul class=""><!--¿Cómo puedo mejorar lo que sigue?-->
-                <li itemprop="telephone" content="+54-3489-500603">WhatsApp: +01 23456789</li>
-                <li itemprop="email" content="hola.auto.jh@gmail.com">Gmail: maria.rodriguez@example.com</li>
-                <li itemprop="sameAs" content="www.linkedin.com/in/maria-rodriguez-cv"><a href="www.linkedin.com/in/maria-rodriguez-cv">LinkedIn</a></li>
-                <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Dirección: <span itemprop="streetAddress">
+        <!--Barra de contacto-->
+        <div class="no-style contact-bar" itemscope itemtype="http://schema.org/Person">
+            <ul>
+                <li itemprop="telephone" content="+54-3489-500603"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                    <path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
+                  </svg>+01 23456789</li>
+                <li itemprop="email" content="hola.auto.jh@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <polyline points="3 7 12 13 21 7" />
+                  </svg>maria.rodriguez@example.com</li>
+                <li itemprop="sameAs" content="www.linkedin.com/in/maria-rodriguez-cv"><a href="www.linkedin.com/in/maria-rodriguez-cv"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                    <line x1="8" y1="11" x2="8" y2="16" />
+                    <line x1="8" y1="8" x2="8" y2="8.01" />
+                    <line x1="12" y1="16" x2="12" y2="11" />
+                    <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                  </svg>LinkedIn</a></li>
+                <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="11" r="3" />
+                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                      </svg>
+                    <span itemprop="streetAddress">
                     742 Evergreen Terrace, </span><span itemprop="addressLocality">Ciudad, </span>
                 <span itemprop="addressRegion">Region</span></li>
             </ul>
         </div>
-        <div class=""> <!--Definir Clase del div-->
-            <button id="toggle-mode">Cambiar a modo oscuro</button>
+        <div class="dark-light">
+            <button id="toggle-mode">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="12" r="4" />
+                <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+              </svg>
+            </button>
         </div>
     </header>
 
-    <main> <!--No me tengo que olvidar de completar con datos-->
-        <div itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
-        <article class=""> <!--Definir Clase-->
+    <main>
+        <div itemscope itemtype="http://schema.org/Organization">
+        <section class="articulos"> 
                 <h2 itemprop="sameAs" content="Experiencia Laboral">Experiencia Laboral</h2>
-                <ul>
+                <ul class="ex-work" itemprop="worksFor">
                     <li>
-                        <time itemprop="startDate" datetime="">Un tiempo - </time><time itemprop="endDate" datetime="">
-                            Otro tiempo</time>
-                        <span itemprop="name"> : Nombre de la empresa, </span><span itemprop="jobTitle">Puesto que ocupaba</span>
+                        <time itemprop="startDate" datetime="2012">2012 - </time><time itemprop="endDate" datetime="2016">
+                            2016</time>
+                        <span itemprop="name"> : Empresa Falsa S.A, </span><span class="job-title" itemprop="jobTitle">Diseñadora Gráfica</span>
+                        <span>
+                            en este cargo, era responsable de la creación de diseños gráficos para campañas publicitarias, 
+                            branding y eventos, para diversos clientes de la agencia. 
+                            Me encargaba de la investigación, conceptualización y ejecución de las ideas, 
+                            así como de la supervisión de la producción y la impresión de los materiales.
+                        </span>
                     </li>
                     <li>
-                        <time itemprop="startDate" datetime="">Un tiempo - </time><time itemprop="endDate" datetime=""> Otro tiempo</time>
-                        <span itemprop="name"> : Nombre de la empresa, </span><span itemprop="jobTitle">Puesto que ocupaba</span>
+                        <time itemprop="startDate" datetime="2016">2016 - </time><time itemprop="endDate" datetime="2018"> 2018</time>
+                        <span itemprop="name"> : Agencia Creativa Fictica, </span>
+                        <span class="job-title" itemprop="jobTitle">Diseñadora Gráfica Senior</span>
+                        <span>
+                            , lideré proyectos para clientes en una variedad de industrias, 
+                            incluyendo tecnología, servicios financieros, salud y bienes de consumo. 
+                            Trabajé en estrecha colaboración con los equipos de cuentas y 
+                            de estrategia para definir los requisitos del proyecto y crear soluciones de diseño atractivas y efectivas.
+                        </span>
                     </li>
                     <li>
-                        <time itemprop="startDate" datetime="">Un tiempo - </time><time itemprop="endDate" datetime="">Otro tiempo</time>
-                        <span itemprop="name"> : Nombre de la empresa, </span><span itemprop="jobTitle">Puesto que ocupaba</span>
+                        <time itemprop="startDate" datetime="2018">2018 - </time><time itemprop="endDate" datetime="2023">2023</time>
+                        <span itemprop="name"> : Empresa Falsa S.A, </span>
+                        <span class="job-title" itemprop="jobTitle">Gerente de marketing digital</span>
+                        <span>, lidero un equipo de especialistas en marketing digital, diseño gráfico y programación. 
+                            Me encargo de desarrollar la estrategia de marketing digital para la empresa, 
+                            crear campañas publicitarias en línea, gestionar las redes sociales, 
+                            el correo electrónico y el contenido del sitio web. También me encargo de la medición y 
+                            análisis de las métricas de rendimiento para mejorar la eficacia de las campañas.
+                        </span>
                     </li>
                 </ul>
-        </article>
+            </section>
         </div>
-        <div itemscope itemtype="http://schema.org/Person"> <!--Rellenar con datos!-->
-        <article>
-                <h2 class="">Formación Profesional</h2> <!--Definir Clase-->
+        <div itemscope itemtype="http://schema.org/Person">
+        <section class="articulos">
+                <h2>Formación Profesional</h2> 
                 <ul>
                     <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-                        <time itemprop="alumniOf" datetime="">Una fecha : </time><span itemprop="name">Nombre de la institución</span>
+                        <time itemprop="alumniOf" datetime="2021">2021 : </time>
+                        <span itemprop="name">Plazi, </span>
+                        <span>Curso de Diseño UX/UI</span>
                     </li>
                     <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-                        <time itemprop="alumniOf" datetime="">Una fecha : </time><span itemprop="name">Nombre de la institución</span>
+                        <time itemprop="alumniOf" datetime="2021">2021 : </time>
+                        <span itemprop="name">Google Academy, </span>
+                        <span>Certificación en Google Analytics</span>
                     </li>
                     <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-                        <time itemprop="alumniOf" datetime="">Una fecha : </time><span itemprop="name">Nombre de la institución</span>
+                        <time itemprop="alumniOf" datetime="2020">2020 : </time>
+                        <span itemprop="name">Intituto de Diseño Falso, </span>
+                        <span>Diplomado en Diseño de Interiores</span>
                     </li>
                     <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-                        <time itemprop="alumniOf" datetime="">Una fecha : </time><span itemprop="name">Nombre de la institución</span>
+                        <time itemprop="alumniOf" datetime="2018">2018 : </time>
+                        <span itemprop="name">Escuela Falsa de Negocios, </span>
+                        <span>Maestría en Marketing Digital</span>
+                    </li>
+                    <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+                        <time itemprop="alumniOf" datetime="2014">2014 : </time>
+                        <span itemprop="name">Universidad Falsa, </span>
+                        <span>Licenciatura en Arte y Diseño</span>
                     </li>
                 </ul>
-        </article>
+        </section>
         </div>
     </main>
 
     <aside itemscope itemtype="http://schema.org/Person">
-        <div class="" itemprop="skill" itemscope itemtype="http://schema.org/Skill"> <!--Definir Clase-->
-            <h3>Habilidades</h3>
-                <ul>
-                    <li> <!--Tengo que separar el nombre de la habilidad de en nivel-->
-                        <span itemprop="name">Nombre de habilidad 1 :</span>
-                        <span itemprop="level" content="expert">Nivel</span>
-                    </li>
-                    <li> 
-                        <span itemprop="name">Nombre de habilidad 2 :</span>
-                        <span itemprop="level" content="expert">Nivel</span>
-                    </li>
-                    <li> 
-                        <span itemprop="name">Nombre de habilidad 3 :</span>
-                        <span itemprop="level" content="expert">Nivel</span>
-                    </li>
-                </ul>
-        </div>
-        <div class="" itemscope itemtype="http://schema.org/Person"> <!--Definir Clase-->
-            <h3>Intereses</h3>
-                <ul>
-                    <li itemprop="hobbies">Interés 1</li>
-                    <li itemprop="hobbies">Interés 2</li>
-                    <li itemprop="hobbies">Interés 3</li>
-                </ul>
-        </div> <!--Definir Clase del div-->
-        <div class="" itemscope itemtype="http://schema.org/Person">
-            <h3>Formas de Contacto</h3>
-            <ul class=""><!--¿Cómo puedo mejorar lo que sigue?-->
-                <li itemprop="telephone" content="+54-3489-500603">WhatsApp: +01 2345-6789</li>
-                <li itemprop="email" content="hola.auto.jh@gmail.com">Gmail: maria.rodriguez@example.com</li>
-                <li itemprop="sameAs" content="www.linkedin.com/in/maria-rodriguez-cv"><a href="www.linkedin.com/in/maria-rodriguez-cv">LinkedIn</a></li>
-            </ul>
+        <div class="skills" itemprop="skill" itemscope itemtype="http://schema.org/Skill">
+            <dl>
+                <dt>Habilidades</dt>
+                    <dd>
+                        <span itemprop="name">Diseño gráfico en Adobe Creative Suite: </span>
+                        <span class="skill-level" itemprop="level" content="expert">Senior</span>
+                    </dd>
+                    <dd>
+                        <span itemprop="name">Estrategias de marketing digital y análisis de datos: </span>
+                        <span class="skill-level" itemprop="level" content="expert">Senior</span>
+                    </dd>
+                    <dd>
+                        <span itemprop="name">Diseño de experiencia de usuario y diseño de interfaces de usuario: </span>
+                        <span class="skill-level" itemprop="level" content="expert">Semi Senior</span>
+                    </dd>
+                <dt itemscope itemtype="http://schema.org/Person">Intereses</dt>
+                    <dd itemprop="hobbies">Arte y diseño en todas sus formas</dd>
+                    <dd itemprop="hobbies">Viajar y conocer nuevas culturas</dd>
+                    <dd itemprop="hobbies">Practicar yoga y meditación para mantenerse en equilibrio mental y físico</dd>
+            </dl>
         </div>
     </aside>
-    <footer> <!--Definir Clase del div-->
-        <div class="" itemscope itemtype="http://schema.org/Person">
-            <h3>Formas de Contacto</h3>
-            <ul class=""><!--¿Cómo puedo mejorar lo que sigue?-->
-                <li itemprop="telephone" content="+54-3489-500603">WhatsApp: +01 2345-6789</li>
-                <li itemprop="email" content="hola.auto.jh@gmail.com">Gmail: maria.rodriguez@example.com</li>
-                <li itemprop="sameAs" content="www.linkedin.com/in/maria-rodriguez-cv"><a href="www.linkedin.com/in/maria-rodriguez-cv">LinkedIn</a></li>
+    <footer>
+        <div class="no-style contact-bar" itemscope itemtype="http://schema.org/Person">
+            <ul>
+                <li itemprop="telephone" content="+54-3489-500603">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                        <path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
+                  </svg>
+                  <span>+01 2345-6789</span>
+                </li>
+                <li itemprop="email" content="hola.auto.jh@gmail.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <polyline points="3 7 12 13 21 7" />
+                  </svg>maria.rodriguez@example.com
+                </li>
+                <li itemprop="sameAs" content="www.linkedin.com/in/maria-rodriguez-cv">
+                    <a href="www.linkedin.com/in/maria-rodriguez-cv">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                            <line x1="8" y1="11" x2="8" y2="16" />
+                            <line x1="8" y1="8" x2="8" y2="8.01" />
+                            <line x1="12" y1="16" x2="12" y2="11" />
+                            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                        </svg>LinkedIn
+                    </a>
+                </li>
             </ul>
         </div>
-        <div class=""> <!--Definir Clase del div-->
-            <button id="toggle-mode">Cambiar a modo oscuro</button>
-        </div>
-        <script>
-            const toggleButton = document.getElementById("toggle-mode");
-            const body = document.body;
-
-            toggleButton.onclick = function() {
-            body.classList.toggle("dark");
-            toggleButton.innerHTML = body.classList.contains("dark") ? "Cambiar a modo claro" : "Cambiar a modo oscuro";
-            };
-        </script>
     </footer>
+    <script src="JS-Files/darklight-bottom.js"></script>
 </body>
 </html>
